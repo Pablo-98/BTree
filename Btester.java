@@ -47,6 +47,14 @@ System.out.println("hi");
 
 
 
+//pre order call
+//preOrder(a);
+
+//In order call
+//InOrder(a);
+
+//post order call
+postOrder(a);
 
 
     }
@@ -61,6 +69,24 @@ System.out.println("hi");
         }
 
 
+    }
+
+    public static void InOrder(Bnode root){
+        if (root!=null){
+            InOrder(root.left);
+            System.out.println(root.data);
+            InOrder(root.right);
+        }
+    }
+
+    public static void postOrder(Bnode root){
+
+        if(root!=null){
+
+            postOrder(root.left);
+            postOrder(root.right);
+            System.out.println(root.data);
+        }
     }
 
 
